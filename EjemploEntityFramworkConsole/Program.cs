@@ -15,7 +15,7 @@ namespace EjemploEntityFramworkConsole
             using (SampleEntityFramework db=new SampleEntityFramework()) //Crea la conexion automatica
             {
 
-                /*
+                
                 //ADD
                 //Creamos un objeto llamado oGente
                 Gente oGente = new Gente();
@@ -26,7 +26,7 @@ namespace EjemploEntityFramworkConsole
                 db.Gente.Add(oGente); //Insert Objeto (oGente) para grabar en base datos
                 db.SaveChanges(); //Para enviar la consullta a la bas de datos, es necesario
 
-                
+                /*
 
                 //EDIT
                 //Gente oGente = db.Gente.Find(2); //se puede con el where donde se puede buscar por nombre
@@ -36,7 +36,7 @@ namespace EjemploEntityFramworkConsole
                 db.Entry(oGente).State = System.Data.Entity.EntityState.Modified; //Para decirle a EntityFramework que se realizo una modificacion en este objeto.  Es bueno cuando se trabaja con muchos datos, concurrencia
                 db.SaveChanges();
 
-                */
+                
 
                 //DELETE
                 //Gente oGente = db.Gente.Where(d => d.nombre == "Ana").First(); //First para fijar la busqueda en el primer Ana, pueden haber mas Ana.
@@ -46,6 +46,7 @@ namespace EjemploEntityFramworkConsole
                 db.Gente.Remove(oGente);
                 db.SaveChanges();
 
+                */
 
                 //Para obtener los datos creamos un objeto var
                 var lst = db.Gente;
@@ -58,6 +59,8 @@ namespace EjemploEntityFramworkConsole
             }
 
             Console.Read();
+
+            //
 
         }
     }
