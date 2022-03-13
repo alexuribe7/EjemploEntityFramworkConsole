@@ -26,15 +26,7 @@ namespace EjemploEntityFramworkConsole
                 db.Gente.Add(oGente); //Insert Objeto (oGente) para grabar en base datos
                 db.SaveChanges(); //Para enviar la consullta a la bas de datos, es necesario
 
-                //DELETE
-                //Gente oGente = db.Gente.Where(d => d.nombre == "Ana").First(); //First para fijar la busqueda en el primer Ana, pueden haber mas Ana.
-                
-                Gente oGente = db.Gente.Find(10); //se puede con el where donde se puede buscar por nombre
-                
-                db.Gente.Remove(oGente);
-                db.SaveChanges();
-                
-                */
+
 
                 //EDIT
                 //Gente oGente = db.Gente.Find(2); //se puede con el where donde se puede buscar por nombre
@@ -44,9 +36,15 @@ namespace EjemploEntityFramworkConsole
                 db.Entry(oGente).State = System.Data.Entity.EntityState.Modified; //Para decirle a EntityFramework que se realizo una modificacion en este objeto.  Es bueno cuando se trabaja con muchos datos, concurrencia
                 db.SaveChanges();
 
+                */
+
+                //DELETE
+                //Gente oGente = db.Gente.Where(d => d.nombre == "Ana").First(); //First para fijar la busqueda en el primer Ana, pueden haber mas Ana.
                 
-
-
+                Gente oGente = db.Gente.Find(10); //se puede con el where donde se puede buscar por nombre
+                
+                db.Gente.Remove(oGente);
+                db.SaveChanges();
 
                 
 
